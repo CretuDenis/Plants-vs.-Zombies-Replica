@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Plants vs Zombies">
+    <output-path>$PROJECT_DIR$/out/artifacts/Plants_vs_Zombies</output-path>
+    <root id="archive" name="PVZ.jar">
+      <element id="module-output" name="PVZ" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PVZ:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PVZ_jar</output-path>
+    <root id="archive" name="PVZ.jar">
+      <element id="module-output" name="PVZ" />
+    </root>
+  </artifact>
+</component>
