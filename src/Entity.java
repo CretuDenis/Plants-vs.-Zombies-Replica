@@ -2,6 +2,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.File;
 
 public class Entity {
     private float x,y;
@@ -70,7 +71,7 @@ public class Entity {
     public void loadImage(String spriteName) {
         sprite = null;
         try {
-            sprite = ImageIO.read(getClass().getResourceAsStream(spriteName));
+            sprite = ImageIO.read(new File(spriteName));
         }catch(IOException e) {
             e.printStackTrace();
         }

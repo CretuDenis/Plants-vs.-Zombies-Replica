@@ -37,9 +37,7 @@ public class SoundManager {
     }
 
     private void loadAudio(String name,int index) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-       InputStream audioInput = getClass().getResourceAsStream("/audio/" + name + ".wav");
-       InputStream bufferedIn = new BufferedInputStream(audioInput);
-       AudioInputStream audioStream = AudioSystem.getAudioInputStream(bufferedIn);
+       AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File("../resources/audio/" + name + ".wav"));
        Clip clip = AudioSystem.getClip();
        clip.open(audioStream);
        soundEffects[index] = clip;

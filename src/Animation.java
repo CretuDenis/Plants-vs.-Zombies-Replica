@@ -1,6 +1,7 @@
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.File;
 
 public class Animation {
     private BufferedImage[] frames;
@@ -24,7 +25,7 @@ public class Animation {
         frames[frameIndex] = null;
 
         try {
-            frames[frameIndex] = ImageIO.read(getClass().getResourceAsStream("/animations/" + spriteName + "/" + spriteName +  " (" + (frameIndex+1) + ")" + ".png"));
+            frames[frameIndex] = ImageIO.read(new File("../resources/animations/" + spriteName + "/" + spriteName +  " (" + (frameIndex+1) + ")" + ".png"));
         }catch(IOException e) {
             e.printStackTrace();
         }

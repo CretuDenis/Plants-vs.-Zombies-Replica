@@ -19,7 +19,7 @@ public class LawnManager {
     public void placeGrid() {
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLUMNS; j++) {
-                grassGrid[i][j] = new Interactable(initialX + j*cellWidth + 10,initialY + i*cellHeight - 5,"assets/test.png",1150/9,600/6);
+                grassGrid[i][j] = new Interactable(initialX + j*cellWidth + 10,initialY + i*cellHeight - 5,"../resources/assets/test.png",1150/9,600/6);
             }
         }
     }

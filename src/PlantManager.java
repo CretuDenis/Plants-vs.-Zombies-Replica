@@ -2,6 +2,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
@@ -10,7 +11,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class PlantManager {
     public static final int plantSpriteWidth = 100;
-    public static Entity currentCursorPlant = new Entity(-200, -200, plantSpriteWidth, plantSpriteWidth, "animations/sunflower/sunflower (1).png");
+    public static Entity currentCursorPlant = new Entity(-200, -200, plantSpriteWidth, plantSpriteWidth, "../resources/animations/sunflower/sunflower (1).png");
     private static CopyOnWriteArrayList<Plant> placedPlants = new CopyOnWriteArrayList<>();
     public static Plant[][] plantGrid = new Plant[5][9];
     static int currentPlantState = -1;
@@ -23,13 +24,13 @@ public class PlantManager {
 
     PlantManager() {
         try {
-            projectiles[0] = ImageIO.read(getClass().getResourceAsStream("./assets/pea.png"));
+            projectiles[0] = ImageIO.read(new File("../resources/assets/pea.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         try {
-            projectiles[1] = ImageIO.read(getClass().getResourceAsStream("./assets/snow_pea.png"));
+            projectiles[1] = ImageIO.read(new File("../resources/assets/snow_pea.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -75,31 +76,31 @@ public class PlantManager {
             SunManager.sunCount -= sunCost;
             switch (currentPanel) {
                 case 0:
-                    currentCursorPlant.setSprite("animations/peashooter/peashooter (1).png");
+                    currentCursorPlant.setSprite("../resources/animations/peashooter/peashooter (1).png");
                     currentPlantState = 0;
                     break;
                 case 1:
-                    currentCursorPlant.setSprite("animations/sunflower/sunflower (1).png");
+                    currentCursorPlant.setSprite("../resources/animations/sunflower/sunflower (1).png");
                     currentPlantState = 1;
                     break;
                 case 2:
-                    currentCursorPlant.setSprite("animations/cherrybomb/cherrybomb (1).png");
+                    currentCursorPlant.setSprite("../resources/animations/cherrybomb/cherrybomb (1).png");
                     currentPlantState = 2;
                     break;
                 case 3:
-                    currentCursorPlant.setSprite("animations/wallnut/wallnut (1).png");
+                    currentCursorPlant.setSprite("../resources/animations/wallnut/wallnut (1).png");
                     currentPlantState = 3;
                     break;
                 case 4:
-                    currentCursorPlant.setSprite("animations/potatomine/potatomine (1).png");
+                    currentCursorPlant.setSprite("../resources/animations/potatomine/potatomine (1).png");
                     currentPlantState = 4;
                     break;
                 case 5:
-                    currentCursorPlant.setSprite("animations/snowpea/snowpea (1).png");
+                    currentCursorPlant.setSprite("../resources/animations/snowpea/snowpea (1).png");
                     currentPlantState = 5;
                     break;
                 case 6:
-                    currentCursorPlant.setSprite("animations/repeater/repeater (1).png");
+                    currentCursorPlant.setSprite("../resources/animations/repeater/repeater (1).png");
                     currentPlantState = 6;
                     break;
                 default:

@@ -42,8 +42,6 @@ public class Repeater extends Plant {
         int contor = 0;
         for(int i = getColumn(); i < 9; i++) {
             contor += ZombieManager.lawnZombies[getRow()][i].size();
-            if(ZombieManager.lawnZombies[getRow()][i].size() != 0)
-                System.out.println(i);
         }
         if(contor == 0) {
             shooting = false;
