@@ -5,7 +5,9 @@ Hopefully playable out of the box. ***Works on my machine.****
 
 ## How to run
 `git clone https://github.com/CretuDenis/Plants-vs.-Zombies-Replica`
+
 `cd Plants-vs.-Zombies-Replica`
+
 `./build`
 
 ## Implemented features
